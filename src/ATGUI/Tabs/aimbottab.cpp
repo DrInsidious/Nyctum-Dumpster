@@ -463,7 +463,7 @@ void Aimbot::RenderTab()
 					case ItemDefinitionIndex::WEAPON_REVOLVER:
 						if (ImGui::Checkbox("Auto Cock Revolver", &autoCockRevolver))
 							UI::UpdateWeaponSettings();
-						SetTooltip("Automatically cocks revolver so it shoots instantly");
+						SetTooltip("Automatically preloads revolver so it shoots instantly");
 						if (ImGui::Checkbox("Auto Pistol", &autoPistolEnabled))
 							UI::UpdateWeaponSettings();
 						SetTooltip("Automatically shoots the pistol when holding fire");
@@ -475,7 +475,7 @@ void Aimbot::RenderTab()
 				if (ImGui::Checkbox("Auto Shoot", &autoShootEnabled))
 					UI::UpdateWeaponSettings();
 				SetTooltip("Automatically shoots when locking to an enemy");
-				ImGui::Checkbox("^Velocity Check", &Settings::Aimbot::AutoShoot::velocityCheck);
+				ImGui::Checkbox("Velocity Check", &Settings::Aimbot::AutoShoot::velocityCheck);
 				SetTooltip("Auto Shoot when below move penalty threshold.\nRecommend using with Auto-Slow");
 				if( ImGui::Checkbox("Spread Limit", &spreadLimitEnabled) )
 					UI::UpdateWeaponSettings();
